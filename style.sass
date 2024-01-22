@@ -1,3 +1,4 @@
+//animations
 @keyframes upToDown
     0%
         transform: translateY(-50px)    
@@ -38,11 +39,7 @@
         opacity: 100 
     
     
-    
-
-    
-    
-    
+//all pages
 body
     font-family: Roboto
     display: flex
@@ -66,6 +63,27 @@ body
 a
     text-decoration: none
 
+.nav_ul
+    width: 1024px
+    display: flex
+    justify-content: space-around
+    align-items: center
+    list-style: none
+
+.nav_a
+    color: black
+    text-align: center
+    padding: 10px
+    background-color: #e5eeee
+    border-radius: 20px
+    transition: 0.1s
+.nav_li
+    animation: upToDown .4s ease-out .1s backwards
+    transition: 0.1s
+    &:hover
+        transform: scale(1.2)
+
+//main page 1st section
 .about
     border-top-left-radius: 20px
     border-top-right-radius: 20px
@@ -112,6 +130,9 @@ a
     &:hover
         border: #3c5959 10px solid
         
+.text_h2
+    margin: 0px
+    padding: 0px
 
 .buttons
     height: 200px
@@ -119,27 +140,9 @@ a
     justify-content: space-around
     background-color: #dfe3e3
 
-.nav_ul
-    width: 1024px
-    display: flex
-    justify-content: space-around
-    align-items: center
-    list-style: none
-
-.nav_a
-    color: black
-    text-align: center
-    padding: 10px
-    background-color: #e5eeee
-    border-radius: 20px
-    transition: 0.1s
-.nav_li
-    animation: upToDown .4s ease-out .1s backwards
-    transition: 0.1s
-    &:hover
-        transform: scale(1.2)
 
 
+//main 2nd section
 .text
     border-radius: 10px
     margin-top: 30px
@@ -164,9 +167,6 @@ a
         transform: scale(1.1)
         border: #e8f4f3 5px solid
 
-.text_h2
-    margin: 0px
-    padding: 0px
 
 .text_block
     animation: upToDown .4s ease-out .1s backwards
@@ -176,4 +176,31 @@ a
 
     background-color: #cfcfcf
     padding: 20px
+    border-radius: 10px
+
+
+//resume
+.education
+    background-color: #dddddd
+    padding: 20px
+    border-radius: 20px
+    
+.education__h2
+    color:#474d58
+    text-align: center
+
+.education__ul
+    list-style: none
+    color:#474d58
+    text-align: center
+
+    
+
+.education__li
+    margin: 10px
+    
+.education__block
+    background-color: #cfcfcf
+    padding: 20px
+    margin: 20px
     border-radius: 10px
