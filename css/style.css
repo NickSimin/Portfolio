@@ -137,7 +137,7 @@ a {
 .buttons {
   height: 200px;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
   background-color: #dfe3e3;
 }
 
