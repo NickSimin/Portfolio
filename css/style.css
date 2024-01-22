@@ -209,12 +209,13 @@ a {
 }
 
 .education {
+  margin: 10px;
   background-color: #dddddd;
   padding: 20px;
   border-radius: 20px;
 }
 
-.education__h2 {
+.resume__h2 {
   color: #474d58;
   text-align: center;
 }
@@ -234,4 +235,32 @@ a {
   padding: 20px;
   margin: 20px;
   border-radius: 10px;
+}
+
+.skills {
+  margin: 10px;
+  background-color: #dddddd;
+  padding: 20px;
+  border-radius: 20px;
+}
+
+.skill__block {
+  display: flex;
+  background-color: #cfcfcf;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 10px;
+  flex-direction: column;
+  align-items: center;
+}
+
+.skill__row {
+  display: flex;
+}
+
+.skill__col {
+  margin: 10px;
+  padding: 15px;
+  border-radius: 20px;
+  background-color: #e5e5e5;
 }/*# sourceMappingURL=style.css.map */
