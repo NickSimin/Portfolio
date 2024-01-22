@@ -263,4 +263,16 @@ a {
   padding: 15px;
   border-radius: 20px;
   background-color: #e5e5e5;
+}
+
+.projects {
+  margin: 10px;
+  background-color: #dddddd;
+  padding: 20px;
+  border-radius: 20px;
+}
+
+.project__img {
+  width: 140px;
+  height: 100px;
 }/*# sourceMappingURL=style.css.map */
