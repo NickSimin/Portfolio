@@ -273,6 +273,41 @@ a {
 }
 
 .project__img {
-  width: 140px;
-  height: 100px;
+  width: 280px;
+  height: 170px;
+}
+
+.project__block {
+  display: flex;
+  background: #c8c8c8;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 20px;
+  justify-content: space-between;
+}
+
+.project__description {
+  font-size: larger;
+}
+
+.project__text {
+  padding: 20px;
+  border-radius: 10px;
+  margin: 10px;
+  background-color: #dfdfdf;
+}
+
+.project__img {
+  border-radius: 20px;
+  transition: 0.1s;
+}
+.project__img:hover {
+  transform: scale(1.2);
+}
+
+.project__a {
+  color: #494949;
+}
+.project__a:hover {
+  color: #1b1b1b;
 }/*# sourceMappingURL=style.css.map */
