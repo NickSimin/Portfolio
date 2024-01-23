@@ -38,7 +38,25 @@
         transform: translateX(0px)   
         opacity: 100 
     
-    
+@keyframes leftToRightBig
+    0%
+        transform: translateX(-100px)    
+        opacity: 0 
+    75%
+        transform: translateX(35px)
+    100%
+        transform: translateX(0px)   
+        opacity: 100 
+
+@keyframes rightToLeftBig
+    0%
+        transform: translateX(100px)    
+        opacity: 0 
+    75%
+        transform: translateX(-35px)
+    100%
+        transform: translateX(0px)   
+        opacity: 100 
 //all pages
 body
     font-family: Roboto
@@ -92,21 +110,7 @@ a
     justify-content: space-between
     align-items: center
     background-color: #dfe3e3
-.about_a1
-    &:link, &:visited
-        height: 20px
-        animation: downToUp .4s ease-out .1s backwards
-        margin: 30px
-        color: black
-        background: #afc5c5
-        padding: 30px
-        border-radius: 25px
 
-        border: #badfdf 3px solid
-        transition: .2s
-    &:hover
-        transform: scale(1.1)
-        border: #e8f4f3 5px solid
 .about_h2
     animation: leftToRight .4s ease-out .1s backwards
     text-align: center
@@ -134,10 +138,26 @@ a
     margin: 0px
     padding: 0px
 
+.about_button
+    &:link, &:visited
+        height: 20px
+        animation: downToUp .4s ease-out .1s backwards
+        margin: 0
+        color: black
+        background: #afc5c5
+        padding: 30px
+        border-radius: 25px
+
+        border: #badfdf 3px solid
+        transition: .2s
+    &:hover
+        transform: scale(1.1)
+        border: #e8f4f3 5px solid
 .buttons
     height: 200px
     display: flex
     justify-content: space-around
+    align-items: center
     background-color: #dfe3e3
 
 
@@ -151,8 +171,8 @@ a
     background: #dfe3e3
     flex-direction: column
     align-items: center
-    justify-content: center
-.text_a
+    justify-content: space-around
+.text_button
     &:link, &:visited
         animation: downToUp .4s ease-out .1s backwards
         margin: 30px
@@ -187,6 +207,7 @@ a
     border-radius: 20px
     
 .resume__h2
+    animation: upToDown .2s ease-in 
     color:#474d58
     text-align: center
 
@@ -205,6 +226,10 @@ a
     padding: 20px
     margin: 20px
     border-radius: 10px
+.leftToRightBig
+    animation: leftToRightBig .4s ease-in 
+.rightToLeftBig
+    animation: rightToLeftBig .4s ease-in 
 
 
 //resume  skills

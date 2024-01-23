@@ -50,6 +50,32 @@
     opacity: 100;
   }
 }
+@keyframes leftToRightBig {
+  0% {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  75% {
+    transform: translateX(35px);
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 100;
+  }
+}
+@keyframes rightToLeftBig {
+  0% {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  75% {
+    transform: translateX(-35px);
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 100;
+  }
+}
 body {
   font-family: Roboto;
   display: flex;
@@ -114,22 +140,6 @@ a {
   background-color: #dfe3e3;
 }
 
-.about_a1:link, .about_a1:visited {
-  height: 20px;
-  animation: downToUp 0.4s ease-out 0.1s backwards;
-  margin: 30px;
-  color: black;
-  background: #afc5c5;
-  padding: 30px;
-  border-radius: 25px;
-  border: #badfdf 3px solid;
-  transition: 0.2s;
-}
-.about_a1:hover {
-  transform: scale(1.1);
-  border: #e8f4f3 5px solid;
-}
-
 .about_h2 {
   animation: leftToRight 0.4s ease-out 0.1s backwards;
   text-align: center;
@@ -164,10 +174,27 @@ a {
   padding: 0px;
 }
 
+.about_button:link, .about_button:visited {
+  height: 20px;
+  animation: downToUp 0.4s ease-out 0.1s backwards;
+  margin: 0;
+  color: black;
+  background: #afc5c5;
+  padding: 30px;
+  border-radius: 25px;
+  border: #badfdf 3px solid;
+  transition: 0.2s;
+}
+.about_button:hover {
+  transform: scale(1.1);
+  border: #e8f4f3 5px solid;
+}
+
 .buttons {
   height: 200px;
   display: flex;
   justify-content: space-around;
+  align-items: center;
   background-color: #dfe3e3;
 }
 
@@ -179,10 +206,10 @@ a {
   background: #dfe3e3;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
 }
 
-.text_a:link, .text_a:visited {
+.text_button:link, .text_button:visited {
   animation: downToUp 0.4s ease-out 0.1s backwards;
   margin: 30px;
   color: black;
@@ -193,7 +220,7 @@ a {
   border: #badfdf 3px solid;
   transition: 0.2s;
 }
-.text_a:hover {
+.text_button:hover {
   transform: scale(1.1);
   border: #e8f4f3 5px solid;
 }
@@ -216,6 +243,7 @@ a {
 }
 
 .resume__h2 {
+  animation: upToDown 0.2s ease-in;
   color: #474d58;
   text-align: center;
 }
@@ -235,6 +263,14 @@ a {
   padding: 20px;
   margin: 20px;
   border-radius: 10px;
+}
+
+.leftToRightBig {
+  animation: leftToRightBig 0.4s ease-in;
+}
+
+.rightToLeftBig {
+  animation: rightToLeftBig 0.4s ease-in;
 }
 
 .skills {
