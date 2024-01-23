@@ -101,6 +101,14 @@ body {
   padding-right: 50px;
 }
 
+.footer {
+  background-color: #d0d0d0;
+  width: 1024px;
+  padding: 10px 50px;
+  text-align: center;
+  font-size: large;
+}
+
 a {
   text-decoration: none;
 }
