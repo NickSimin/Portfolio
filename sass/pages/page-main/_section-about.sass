@@ -6,70 +6,71 @@
     justify-content: space-between
     align-items: center
     background-color: #dfe3e3
+    &__h2
+        animation: leftToRight .4s ease-out .1s backwards
+        text-align: center
+        color: #292b2b
+        margin-left: 40px
+        padding: 20px
+        background-color: #cfcfcf
+        border-radius: 20px
+        transform: skewX(-10deg)
+        box-shadow: $box-shadow
 
-
-.about__h2
-    animation: leftToRight .4s ease-out .1s backwards
-    text-align: center
-    color: #292b2b
-    margin-left: 40px
-    padding: 20px
-    background-color: #cfcfcf
-    border-radius: 20px
-
-.about__img
-    animation: rightToLeft .4s ease-out .1s backwards
-    width: 300px
-    height: 300px
-    margin-right: 70px
-    padding: 20px
-    perspective: 1500px
-    -moz-perspective: 1500px
-    position: relative
-    &__side
-        height: 300px
+    &__img
+        animation: rightToLeft .4s ease-out .1s backwards
         width: 300px
-        transition: .6s ease-out
-        position: absolute
-        top: 0
-        left: 0
-        backface-visibility: hidden
-        &_back
+        height: 300px
+        margin-right: 70px
+        padding: 20px
+        perspective: 1500px
+        -moz-perspective: 1500px
+        position: relative
+        &__side
+            height: 300px
+            width: 300px
+            transition: .5s ease-out
+            position: absolute
+            top: 0
+            left: 0
+            backface-visibility: hidden
+            &_back
+                transform: rotateY(180deg)
+
+        &:hover &__side_front
             transform: rotateY(180deg)
 
-    &:hover &__side_front
-        transform: rotateY(180deg)
+        &:hover &__side_back
+            transform: rotateY(0deg)
+        &__img
+            height: 350px
+            width: 350px
+            border-radius: 20px
 
-    &:hover &__side_back
-        transform: rotateY(0deg)
-    &__img
-        height: 350px
-        width: 350px
-        border-radius: 20px
+    &__button
+        &:link, &:visited
+            position: absolute
+            bottom: 50px
+            height: 20px
+            animation: downToUp .4s ease-out .1s backwards
+            margin: 0
+            color: black
+            background: #afc5c5
+            padding: 30px
+            border-radius: 20px
 
-.about__button
-    &:link, &:visited
-        position: absolute
-        bottom: 50px
-        height: 20px
-        animation: downToUp .4s ease-out .1s backwards
-        margin: 0
-        color: black
-        background: #afc5c5
-        padding: 30px
-        border-radius: 25px
+            border: #badfdf 3px solid
+            transition: .15s
+            transform: skewX(-10deg)
+            box-shadow: $box-shadow
+        &:hover
+            transform: scale(1.1) skewX(-10deg)
+            border: #e8f4f3 5px solid
 
-        border: #badfdf 3px solid
-        transition: .15s
-        transform: skewX(-10deg)
-    &:hover
-        transform: scale(1.1) skewX(-10deg)
-        border: #e8f4f3 5px solid
-
-    &_right
-        right: 200px
-    &_left
-        left: 200px
+        &_right
+            right: 200px
+        &_left
+            left: 200px
 
 .buttons
     height: 200px

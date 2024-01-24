@@ -1,36 +1,41 @@
-.projects
+.project
     margin: 10px
     background-color: #dddddd
     padding: 20px
     border-radius: 20px
-
-.project
     &__img
         width: 280px
         height: 170px
 
     &__block
+        transform: skewX(-10deg)
         display: flex
         background: #c8c8c8
         padding: 20px
         margin: 20px
         border-radius: 20px
         justify-content: space-between
+        box-shadow: $box-shadow
+
 
     &__description
         font-size: larger
+        transform: skewX(10deg)
 
     &__text
         padding: 20px
         border-radius: 10px
         margin: 10px
         background-color: #dfdfdf
+        box-shadow: $box-shadow
+
 
     &__img
         border-radius: 20px
         transition: .1s
+        transform: skewX(10deg)
         &:hover
-            transform: scale(1.2)
+            transform: scale(1.2) skewX(10deg)
 
     &__a
         color: #494949

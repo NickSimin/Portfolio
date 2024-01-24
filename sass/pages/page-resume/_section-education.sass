@@ -3,19 +3,23 @@
     background-color: #dddddd
     padding: 20px
     border-radius: 20px
-
-.education__ul
-    list-style: none
-    color:#474d58
-    text-align: center
-
+    &__ul
+        list-style: none
+        color:#474d58
+        text-align: center
+        transform: skewX(10deg)
+    &__li
+        margin: 10px
+    &__h2
+        animation: upToDown .2s ease-in 
+        color:#474d58
+        text-align: center
+        transform: skewX(10deg)
     
-
-.education__li
-    margin: 10px
-    
-.education__block
-    background-color: #cfcfcf
-    padding: 20px
-    margin: 20px
-    border-radius: 10px
+    &__block
+        background-color: #cfcfcf
+        padding: 20px
+        margin: 20px
+        border-radius: 10px
+        transform: skewX(-10deg)
+        box-shadow: $box-shadow

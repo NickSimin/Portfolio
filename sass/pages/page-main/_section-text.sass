@@ -16,18 +16,16 @@
         color: black
         background: #afc5c5
         padding: 30px
-        border-radius: 25px
+        border-radius: 20px
         height: 20px
         border: #badfdf 3px solid
         transition: .15s
         transform: skewX(-10deg)
+        box-shadow: $box-shadow
     &:hover
         transform: scale(1.2) skewX(-10deg)
         border: #e8f4f3 5px solid
 
-.text__h2
-    margin: 0px
-    padding: 0px
 .text__block
     animation: upToDown .4s ease-out .1s backwards
     display: flex
@@ -39,3 +37,15 @@
     background-color: #cfcfcf
     padding: 20px
     border-radius: 10px
+    box-shadow: $box-shadow
+    transform: skewX(-10deg)
+    &__h2
+        margin: 0px
+        padding: 0px
+        transform: skewX(10deg)
+    &__p
+        margin: 0px
+        padding: 0px
+        text-align: center
+        line-height: 1.5
+        transform: skewX(10deg)

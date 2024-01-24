@@ -1,32 +1,36 @@
-.skills
+
+
+.skill
     margin: 10px
     background-color: #dddddd
     padding: 20px
     border-radius: 20px
+    &__block
+        display: flex
+        background-color: #cfcfcf
+        padding: 20px
+        margin: 20px
+        border-radius: 10px
+        flex-direction: column
+        align-items: center
 
-.skill__block
-    display: flex
-    background-color: #cfcfcf
-    padding: 20px
-    margin: 20px
-    border-radius: 10px
-    flex-direction: column
-    align-items: center
+    &__row
+        display: flex
 
-.skill__row
-    display: flex
+    &__col
+        margin: 10px
+        padding: 15px
+        border-radius: 20px
+        background-color: #e5e5e5
+        display: flex
+        flex-direction: column-reverse
+        align-items: center
+        transform: skewX(-5deg)
+        box-shadow: $box-shadow
 
-.skill__col
-    margin: 10px
-    padding: 15px
-    border-radius: 20px
-    background-color: #e5e5e5
-    display: flex
-    flex-direction: column-reverse
-    align-items: center
-
-.skill__img
-    width: 40px
-    height: 40px
-    padding: 5px
-    margin: 10px
+    &__img
+        width: 40px
+        height: 40px
+        padding: 5px
+        margin: 10px
+        transform: skewX(5deg)
