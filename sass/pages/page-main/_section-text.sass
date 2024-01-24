@@ -1,0 +1,41 @@
+.text
+    display: flex
+    flex-direction: column
+    align-items: center
+    border-radius: 10px
+    margin-top: 30px
+    height: 500px
+    background: #dfe3e3
+    position: relative
+.text__button
+    &:link, &:visited
+        position: relative
+        top: 300px
+        animation: downToUp .4s ease-out .1s backwards
+        margin: 30px
+        color: black
+        background: #afc5c5
+        padding: 30px
+        border-radius: 25px
+        height: 20px
+        border: #badfdf 3px solid
+        transition: .15s
+        transform: skewX(-10deg)
+    &:hover
+        transform: scale(1.2) skewX(-10deg)
+        border: #e8f4f3 5px solid
+
+.text__h2
+    margin: 0px
+    padding: 0px
+.text__block
+    animation: upToDown .4s ease-out .1s backwards
+    display: flex
+    align-items: center
+    flex-direction: column
+    position: absolute
+    top: 80px
+    
+    background-color: #cfcfcf
+    padding: 20px
+    border-radius: 10px

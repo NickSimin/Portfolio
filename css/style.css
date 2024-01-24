@@ -76,6 +76,14 @@
     opacity: 100;
   }
 }
+.leftToRightBig {
+  animation: leftToRightBig 0.4s ease-in;
+}
+
+.rightToLeftBig {
+  animation: rightToLeftBig 0.4s ease-in;
+}
+
 body {
   font-family: Roboto;
   display: flex;
@@ -148,7 +156,7 @@ a {
   background-color: #dfe3e3;
 }
 
-.about_h2 {
+.about__h2 {
   animation: leftToRight 0.4s ease-out 0.1s backwards;
   text-align: center;
   color: #292b2b;
@@ -156,12 +164,6 @@ a {
   padding: 20px;
   background-color: #cfcfcf;
   border-radius: 20px;
-}
-
-.img {
-  width: 400px;
-  display: flex;
-  justify-content: space-around;
 }
 
 .about__img {
@@ -198,12 +200,9 @@ a {
   border-radius: 20px;
 }
 
-.text_h2 {
-  margin: 0px;
-  padding: 0px;
-}
-
-.about_button:link, .about_button:visited {
+.about__button:link, .about__button:visited {
+  position: absolute;
+  bottom: 50px;
   height: 20px;
   animation: downToUp 0.4s ease-out 0.1s backwards;
   margin: 0;
@@ -212,33 +211,40 @@ a {
   padding: 30px;
   border-radius: 25px;
   border: #badfdf 3px solid;
-  transition: 0.2s;
+  transition: 0.15s;
+  transform: skewX(-10deg);
 }
-.about_button:hover {
-  transform: scale(1.1);
+.about__button:hover {
+  transform: scale(1.1) skewX(-10deg);
   border: #e8f4f3 5px solid;
+}
+.about__button_right {
+  right: 200px;
+}
+.about__button_left {
+  left: 200px;
 }
 
 .buttons {
   height: 200px;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
+  position: relative;
   background-color: #dfe3e3;
 }
 
 .text {
-  border-radius: 10px;
-  margin-top: 30px;
   display: flex;
-  height: 500px;
-  background: #dfe3e3;
   flex-direction: column;
   align-items: center;
-  justify-content: space-around;
+  border-radius: 10px;
+  margin-top: 30px;
+  height: 500px;
+  background: #dfe3e3;
+  position: relative;
 }
 
-.text_button:link, .text_button:visited {
+.text__button:link, .text__button:visited {
+  position: relative;
+  top: 300px;
   animation: downToUp 0.4s ease-out 0.1s backwards;
   margin: 30px;
   color: black;
@@ -247,21 +253,35 @@ a {
   border-radius: 25px;
   height: 20px;
   border: #badfdf 3px solid;
-  transition: 0.2s;
+  transition: 0.15s;
+  transform: skewX(-10deg);
 }
-.text_button:hover {
-  transform: scale(1.1);
+.text__button:hover {
+  transform: scale(1.2) skewX(-10deg);
   border: #e8f4f3 5px solid;
 }
 
-.text_block {
+.text__h2 {
+  margin: 0px;
+  padding: 0px;
+}
+
+.text__block {
   animation: upToDown 0.4s ease-out 0.1s backwards;
   display: flex;
   align-items: center;
   flex-direction: column;
+  position: absolute;
+  top: 80px;
   background-color: #cfcfcf;
   padding: 20px;
   border-radius: 10px;
+}
+
+.resume__h2 {
+  animation: upToDown 0.2s ease-in;
+  color: #474d58;
+  text-align: center;
 }
 
 .education {
@@ -269,12 +289,6 @@ a {
   background-color: #dddddd;
   padding: 20px;
   border-radius: 20px;
-}
-
-.resume__h2 {
-  animation: upToDown 0.2s ease-in;
-  color: #474d58;
-  text-align: center;
 }
 
 .education__ul {
@@ -294,52 +308,6 @@ a {
   border-radius: 10px;
 }
 
-.leftToRightBig {
-  animation: leftToRightBig 0.4s ease-in;
-}
-
-.rightToLeftBig {
-  animation: rightToLeftBig 0.4s ease-in;
-}
-
-.skills {
-  margin: 10px;
-  background-color: #dddddd;
-  padding: 20px;
-  border-radius: 20px;
-}
-
-.skill__block {
-  display: flex;
-  background-color: #cfcfcf;
-  padding: 20px;
-  margin: 20px;
-  border-radius: 10px;
-  flex-direction: column;
-  align-items: center;
-}
-
-.skill__row {
-  display: flex;
-}
-
-.skill__col {
-  margin: 10px;
-  padding: 15px;
-  border-radius: 20px;
-  background-color: #e5e5e5;
-  display: flex;
-  flex-direction: column-reverse;
-  align-items: center;
-}
-
-.skill__img {
-  width: 40px;
-  height: 40px;
-  padding: 5px;
-  margin: 10px;
-}
-
 .projects {
   margin: 10px;
   background-color: #dddddd;
@@ -351,7 +319,6 @@ a {
   width: 280px;
   height: 170px;
 }
-
 .project__block {
   display: flex;
   background: #c8c8c8;
@@ -360,18 +327,15 @@ a {
   border-radius: 20px;
   justify-content: space-between;
 }
-
 .project__description {
   font-size: larger;
 }
-
 .project__text {
   padding: 20px;
   border-radius: 10px;
   margin: 10px;
   background-color: #dfdfdf;
 }
-
 .project__img {
   border-radius: 20px;
   transition: 0.1s;
@@ -379,7 +343,6 @@ a {
 .project__img:hover {
   transform: scale(1.2);
 }
-
 .project__a {
   color: #494949;
 }
