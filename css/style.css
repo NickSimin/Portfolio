@@ -164,17 +164,38 @@ a {
   justify-content: space-around;
 }
 
-.img_about {
+.about__img {
   animation: rightToLeft 0.4s ease-out 0.1s backwards;
   width: 300px;
   height: 300px;
-  border-radius: 45px;
-  margin: 30px;
+  margin-right: 70px;
   padding: 20px;
-  transition: 0.1s;
+  perspective: 1500px;
+  -moz-perspective: 1500px;
+  position: relative;
 }
-.img_about:hover {
-  border: #3c5959 10px solid;
+.about__img__side {
+  height: 300px;
+  width: 300px;
+  transition: 0.6s ease-out;
+  position: absolute;
+  top: 0;
+  left: 0;
+  backface-visibility: hidden;
+}
+.about__img__side_back {
+  transform: rotateY(180deg);
+}
+.about__img:hover .about__img__side_front {
+  transform: rotateY(180deg);
+}
+.about__img:hover .about__img__side_back {
+  transform: rotateY(0deg);
+}
+.about__img__img {
+  height: 350px;
+  width: 350px;
+  border-radius: 20px;
 }
 
 .text_h2 {
