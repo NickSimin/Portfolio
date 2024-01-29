@@ -137,6 +137,9 @@ a {
   border-radius: 20px;
   transition: 0.1s;
 }
+.nav_a_icon {
+  background: none;
+}
 
 .nav_li {
   animation: upToDown 0.4s ease-out 0.1s backwards;
