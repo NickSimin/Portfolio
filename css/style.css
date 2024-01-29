@@ -178,6 +178,7 @@ a {
   perspective: 1500px;
   -moz-perspective: 1500px;
   position: relative;
+  backface-visibility: hidden;
 }
 .about__img__side {
   height: 300px;
